@@ -1,4 +1,6 @@
-// 时间复杂度 O(n²) 空间复杂度 O(1)
+// 冒泡排序
+// 时间复杂度 O(n²) 
+// 空间复杂度 O(1)
 
 function bubbleSort(arr) {
     if(arr === null || arr.length < 2) return;

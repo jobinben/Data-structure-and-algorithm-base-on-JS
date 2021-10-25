@@ -16,10 +16,11 @@ function partition(arr, left, right, num) {
             cur++
         }
     }
-    return arr
+    return new Array(less + 1, more - 1)
 }
 
 function swap(arr, i, j) {
+    // 用异或逻辑符运算时，注意没有相同数字时才可以。否则 4 ^ 4 = 0
     // arr[i] = arr[i] ^ arr[j]
     // arr[j] = arr[i] ^ arr[j]
     // arr[i] = arr[i] ^ arr[j]
@@ -53,7 +54,8 @@ function printArray(arr) {
 function main() {
     let test = generateArray()
     printArray(test)
-    partition(test, 0, test.length - 1, 5)
+    let a = partition(test, 0, test.length - 1, 3)
+    console.log(a)
     printArray(test)
 }
 
