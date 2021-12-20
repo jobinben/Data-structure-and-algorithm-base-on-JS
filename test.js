@@ -1,18 +1,34 @@
+// test 1 : EvenLoop
+// setTimeout(()=>{
+//     console.log('quick timer')
+// },0)
 
-let arr = [4,6,7,3,8,5,2,9]
+// new Promise((resolve,reject)=>{
+//     console.log('init promise')
+//     process.nextTick(resolve)
+// }).then(()=>console.log('promise.then'))
 
-let j = 0;
-for(let i = 0; i < arr.length; i++) {
-    if(arr[i] <= 5) {
-        swap(arr, i, j)
-        j++
-    }
-}
+// process.nextTick(()=>{
+//     console.log('nextTick')
+// })
 
-function swap(arr, i, j) {
-    arr[i] = arr[i] ^ arr[j]
-    arr[j] = arr[i] ^ arr[j]
-    arr[i] = arr[i] ^ arr[j]
-}
+// setImmediate(()=>{
+//     console.log('immediate')
+// })
 
-console.log(arr)
+// test 2 : 递归setTimeout
+// const repeact = (p, n, ms) => {
+//     const result = (str) => {
+//         setTimeout(() => {
+//             if (n > 0) {
+//                 p(str)
+//                 result(str)
+//                 n--
+//             }
+//         }, ms);
+//     }
+//     return result
+// }
+// const repeatFunc = repeact(console.log, 4, 1000)
+// repeatFunc('helloword')
+
